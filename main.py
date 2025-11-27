@@ -34,8 +34,13 @@ def compare(user_score1, cpu_score2):
     else:
         return print(f"{highest_score} wins. ")
 
-input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
 new_game = True
+start_game = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
+if start_game == 'y':
+    new_game = True
+else:
+    print("Exiting game")
+    new_game = False
 
 while new_game:
     print(art.logo)
@@ -86,6 +91,7 @@ while new_game:
         print("\n" * 100)
         new_game = True
     else:
-        if restart_game == "n":
+        print("Thanks for playing!"):
             new_game = False
+
 
